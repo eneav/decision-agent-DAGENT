@@ -1,0 +1,7 @@
+streamlit
+pandas
+joblib
+openai>=1.0.0
+python-dotenv
+scikit-learn
+plotly
