@@ -211,8 +211,3 @@ if st.session_state["show_llm"] and "last_predictions" in st.session_state:
         st.error(f"Fehler bei der LLM-Abfrage: {e}")
 
 
-# Footer-Link
-st.markdown(
-    "<p style='text-align: center; font-size: 12px; color: gray;'>Mehr Infos auf <a href='https://github.com/eneav/opi-bot' target='_blank' style='color: gray;'>GitHub</a></p>",
-    unsafe_allow_html=True
-)

@@ -1,7 +1,7 @@
 # decision-agent@DAGENT: Krankheitsprognose für Bewerber
 
 <p align="center">
-  <img src="imgs/favicon.png" alt="icon" width="200"/>
+  <img src="imgs/favicon2.png" alt="icon" width="200"/>
 </p>
 
 ![Live demo](imgs/screencast-localhost_8501-2025.04.23-21_30_59-ezgif.com-video-to-gif-converter.gif)
