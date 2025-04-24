@@ -8,6 +8,13 @@ from itertools import product
 import os
 import plotly.express as px
 from dotenv import load_dotenv
+import base64
+
+def get_base64_img(path):
+    with open(path, "rb") as f:
+        data = f.read()
+    return base64.b64encode(data).decode()
+
 
 #gen. setup
 load_dotenv()
@@ -16,7 +23,8 @@ load_dotenv()
 
                                        #ladet api key aus .env file |bei bedarf fallback bauen mit model unter openai.api_key
 openai.api_key = os.getenv("OPENAI_API_KEY")
-
+with open("imgs/favicon2.png", "rb") as image_file:
+    img_base64 = base64.b64encode(image_file.read()).decode()
 
 default_values = {          # fallback für fehlende Eingaben , werden ERST aktiviert wenn user checkbox aktiviert
     "alter_jahre": 40,
@@ -49,13 +57,32 @@ st.set_page_config(
     layout="wide"
 )
 
+
+
 if "show_csv" not in st.session_state:
     st.session_state["show_csv"] = False
 if "show_llm" not in st.session_state:
     st.session_state["show_llm"] = False
 
 # ui
-st.title("decision-agent@DAGENT ")
+# ui
+img_base64 = get_base64_img("imgs/favicon2.png")
+
+# Base64-Version deines Icons muss vorher in img_base64 gespeichert sein
+
+st.markdown(
+    f"""
+    <div style='display: flex; justify-content: space-between; align-items: center; margin-bottom: 0px;'>
+        <h1 style='margin: 0;'>decision-agent@DAGENT</h1>
+        <img src='data:image/png;base64,{img_base64}' width='150' style='margin-bottom: -6px; margin-top: 4px;'/>
+    </div>
+    <hr style='margin-top: 6px; margin-bottom: 10px; border: 1px solid #444;'>
+    """,
+    unsafe_allow_html=True
+)
+
+
+# st.title("decision-agent@DAGENT ")
 st.markdown("Krankheitstage-Prognose für Bewerber mit anschließendem Vergleich und Analyse durch ein LLM.")
 st.markdown("Anwendung zur (sim.) datengestützten Entscheidungshilfe bei Kandidatenvergleichen (z.b. für HR).")
 
