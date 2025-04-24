@@ -1,5 +1,9 @@
 # decision-agent@DAGENT: Krankheitsprognose für Bewerber
 
+<p align="center">
+  <img src="imgs/favicon.png" alt="icon" width="200"/>
+</p>
+
 ![Live demo](imgs/screencast-localhost_8501-2025.04.23-21_30_59-ezgif.com-video-to-gif-converter.gif)
 
 Dieses Projekt entstand aus der Idee, Bewerberprofile nicht nur anhand von Lebensläufen oder Gesprächen zu beurteilen, sondern auch mit Hilfe von Daten. Genauer gesagt:
@@ -8,7 +12,7 @@ Wie viele Krankheitstage könnten bei einer Person im Jahr voraussichtlich anfal
 
 Ein trainiertes Machine-Learning-Modell (Random Forest Regressor) analysiert Angaben wie Alter, Wohnlage, Entfernung, Homeoffice-Tage, Familienstand und Kinder.
 
-Trainiert wurde das Modell mit 2.000 simulierten Profilen.
+Trainiert wurde das Modell mit 2.000 simulierten Profilen. (Siehe abschnitt:Beispielhafte Trainingsdaten)
 
 ---
 
