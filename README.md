@@ -1,4 +1,4 @@
-# decision-agent@DAGENT: Krankheitsprognose für Bewerber
+# decision-agent@DAGENT: Krankheitsprognose Bewerber
 
 <p align="center">
   <img src="imgs/favicon2.png" alt="icon" width="200"/>
